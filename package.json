@@ -7,6 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon --exec babel-node src/server/index.js",
     "start": "node server/index.js",
+    "build": "babel src -d dist --copy-files",
+    "postbuild": "cp package.json dist",
     "lint": "eslint src/**/*.js"
   },
   "author": "",
@@ -30,7 +32,8 @@
   "dependencies": {
     "babel-runtime": "^6.11.6",
     "bluebird": "^3.4.3",
-    "hapi": "^14.2.0"
+    "hapi": "^14.2.0",
+    "mongodb": "^2.2.10"
   },
   "engines": {
     "node": "6.7.x"
